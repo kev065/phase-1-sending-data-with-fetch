@@ -1,5 +1,5 @@
 function submitData (name, email) {
-    const configurationObject = {
+    fetch('http://localhost:3000/users', {
         method: "POST",
         headers: {
          "Content-Type": "application/json",
@@ -8,4 +8,6 @@ function submitData (name, email) {
         body: JSON.stringify({
             name, email
         })
-    }
+    })
+}
+
